@@ -2,11 +2,11 @@ pipeline {
     agent any
 
         stages {
-                steps {
-                        sh """
-                                /bin/bash testscript.sh
-                        """
-                }
+		stage('stage 1') {
+                	steps {
+                        	sh "/bin/bash testscript.sh"
+                	}
+		}
         }
 }
 
